@@ -1,0 +1,1 @@
+# For favicon files

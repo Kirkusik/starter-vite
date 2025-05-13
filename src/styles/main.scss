@@ -1,0 +1,21 @@
+// ? CORE STYLES
+@use "./сore/vars.scss";
+@use "./сore/modern-normalize.scss";
+@use "./сore/fonts.scss";
+@use "./сore/base.scss";
+
+// ? COMPONENTS
+@use "./components/components-index.scss";
+
+// ? PLUGINS
+@use "swiper/css";
+@use "swiper/css/effect-fade";
+
+// ? Header
+@use "./header.scss";
+
+// ? HOME PAGE
+@use "./home/home-index.scss";
+
+// ? Footer
+@use "./footer.scss";
