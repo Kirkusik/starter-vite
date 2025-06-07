@@ -74,7 +74,7 @@ export default defineConfig(({ command }) => {
 					});
 				},
 			},
-			{
+			!isBuild && {
 				name: "floating-menu",
 				transformIndexHtml(html, { path }) {
 					const inputs = getHtmlInputs();
