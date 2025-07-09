@@ -1,7 +1,6 @@
 // vite.config.js
 import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
-import viteImagemin from "vite-plugin-imagemin";
 import postcssUrl from "postcss-url";
 import { resolve } from "path";
 import fs from "fs";
@@ -171,23 +170,6 @@ export default defineConfig(({ command }) => {
 					/* ничего не делаем — Vite по умолчанию копирует public/ */
 				},
 			},
-
-			// 5) Оптимизация изображений только при build
-			...(isBuild
-				? [
-						viteImagemin({
-							gifsicle: { optimizationLevel: 3 },
-							optipng: { optimizationLevel: 5 },
-							mozjpeg: { quality: 75 },
-							svgo: {
-								plugins: [
-									{ name: "removeViewBox", active: false },
-									{ name: "removeEmptyAttrs", active: true },
-								],
-							},
-						}),
-				  ]
-				: []),
 		],
 
 		server: {

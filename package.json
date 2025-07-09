@@ -5,18 +5,18 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build && node move-html.js",
+		"build": "vite build && node move-html.js && node optimize-images.js",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
 		"postcss": "^8.5.3",
 		"postcss-url": "^10.1.3",
 		"sass": "^1.87.0",
+		"sharp": "^0.34.2",
 		"swiper": "^11.2.6",
 		"vite": "^6.3.5",
 		"vite-imagetools": "^7.0.5",
 		"vite-plugin-handlebars": "^2.0.0",
-		"vite-plugin-imagemin": "^0.6.1",
 		"vite-plugin-static-copy": "^2.3.1",
 		"vite-plugin-string-replace": "^1.1.3"
 	}
